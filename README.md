@@ -85,6 +85,17 @@ dua
 satu
 ```
 
+Pertanyaan:
+
+*Loh,* mengapa output-nya menjadi **dua** terlebih dahulu baru **satu**?
+Padahal *kan* **fungsiPertama** dipanggil terlebih dahulu sebelum **fungsiKedua**?
+
+Penjelasan:
+
+Ini bukan berarti Javascript *ngeyel* dengan tidak menjalankan **fungsiPertama**
+dahulu baru menjalankan **fungsiKedua**, hanya saja ***Javascript tidak menunggu***
+***respon dari*** **fungsiPertama** ***sebelum menjalankan*** **fungsiKedua**.
+
 ### Synchronous callback
 
 ### Asynchronous callback
