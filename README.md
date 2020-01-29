@@ -28,7 +28,7 @@ Javascript akan mengeksekusi sesuatu sambil menunggu event lainnya.
 
 Contoh:
 
-```Javascript
+```javascript
 function eventPertama() {
   console.log("satu");
 }
@@ -36,6 +36,7 @@ function eventPertama() {
 function eventKedua() {
   console.log("kedua");
 }
+```
 
 ### Synchronous callback
 
