@@ -29,13 +29,60 @@ Javascript akan mengeksekusi sesuatu sambil menunggu event lainnya.
 Contoh:
 
 ```javascript
-function eventPertama() {
+function fungsiPertama() {
   console.log("satu");
 }
 
-function eventKedua() {
-  console.log("kedua");
+function fungsiKedua() {
+  console.log("dua");
 }
+
+fungsiPertama();
+fungsiKedua();
+```
+
+Output:
+
+```javascript
+satu
+dua
+```
+
+Penjelasan:
+
+Pada kode di atas, **fungsiPertama** akan dijalankan terlebih dahulu sebelum 
+**fungsiKedua**. semua terkesan baik-baik saja.
+
+Tapi apa yang terjadi bila **fungsiPertama** memiliki kode yang tidak bisa 
+dijalankan dengan cepat? Contohnya API request dimana harus mengirim request
+dan menunggu response?
+
+Untuk mensimulasikan ini, kita akan mengubah kode kita di atas dengan menambahkan
+fungsi bawaan Javscript **setTimeout**
+
+Contoh baru:
+
+```javascript
+function fungsiPertama() {
+  //Simulasi delay sebagai analogi API Request
+  setTimeout( () => {
+    console.log("satu");
+  }, 500);
+}
+
+function fungsiKedua() {
+  console.log("dua");
+}
+
+fungsiPertama();
+fungsiKedua();
+```
+
+Output baru:
+
+```javascript
+dua
+satu
 ```
 
 ### Synchronous callback
