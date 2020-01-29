@@ -1,10 +1,9 @@
 ## Table of Content
 1. [Apa itu callback?](#apa-itu-callback)
-2. [Mengapa butuh callback?](#mengapa-butuh-callback)
-3. [Synchronous callback](#synchronous-callback)
-4. [Asynchronous callback](#asynchronous-callback)
-5. [Real-world case study](#real-world-case-study)
-6. [Referensi](#referensi)
+1. [Mengapa butuh callback?](#mengapa-butuh-callback)
+1. [Yuk buat callback!](#yuk-buat-callback)
+1. [Real-world case study](#real-world-case-study)
+1. [Referensi](#referensi)
 
 ### Apa itu callback?
 Secara sederhananya:
@@ -99,9 +98,7 @@ secara berurutan dan berharap urutan tersebut akan dijalankan dengan benar.
 
 Solusinya bagaimana? salah satunya adalah dengan menggunakan **callback**.
 
-### Synchronous callback
-
-### Asynchronous callback
+### Yuk buat callback!
 
 ### Real-world case study
 
