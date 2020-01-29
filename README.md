@@ -50,15 +50,15 @@ dua
 
 Penjelasan:
 
-Pada kode di atas, **fungsiPertama** akan dijalankan terlebih dahulu sebelum 
-**fungsiKedua**. semua terkesan baik-baik saja.
+Pada kode di atas, `fungsiPertama` akan dijalankan terlebih dahulu sebelum 
+`fungsiKedua`. semua terkesan baik-baik saja.
 
-Tapi apa yang terjadi bila **fungsiPertama** memiliki kode yang tidak bisa 
+Tapi apa yang terjadi bila `fungsiPertama` memiliki kode yang tidak bisa 
 dijalankan dengan cepat? Contohnya API request dimana harus mengirim request
 dan menunggu response?
 
 Untuk mensimulasikan ini, kita akan mengubah kode kita di atas dengan menambahkan
-fungsi bawaan Javscript **setTimeout**
+fungsi bawaan Javascript `setTimeout`
 
 Contoh baru:
 
@@ -88,13 +88,13 @@ satu
 Pertanyaan:
 
 *Loh,* mengapa output-nya menjadi **dua** terlebih dahulu baru **satu**?
-Padahal *kan* **fungsiPertama** dipanggil terlebih dahulu sebelum **fungsiKedua**?
+Padahal *kan* `fungsiPertama` dipanggil terlebih dahulu sebelum `fungsiKedua`?
 
 Penjelasan:
 
-Ini bukan berarti Javascript *ngeyel* dengan tidak menjalankan **fungsiPertama**
-dahulu baru menjalankan **fungsiKedua**, hanya saja ***Javascript tidak menunggu***
-***respon dari*** **fungsiPertama** ***sebelum menjalankan*** **fungsiKedua**.
+Ini bukan berarti Javascript *ngeyel* dengan tidak menjalankan `fungsiPertama`
+dahulu baru menjalankan `fungsiKedua`, hanya saja ***Javascript tidak menunggu***
+***respon dari*** `fungsiPertama` ***sebelum menjalankan*** `fungsiKedua`.
 
 ### Synchronous callback
 
