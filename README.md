@@ -1,5 +1,3 @@
-## Pages ini akan membantu kita untuk belajar tentang apa itu callback.
-
 ## Table of Content
 1. [Apa itu callback?](#apa-itu-callback)
 2. [Mengapa butuh callback?](#mengapa-butuh-callback)
