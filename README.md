@@ -96,6 +96,11 @@ Ini bukan berarti Javascript *ngeyel* dengan tidak menjalankan `fungsiPertama`
 dahulu baru menjalankan `fungsiKedua`, hanya saja ***Javascript tidak menunggu***
 ***respon dari*** `fungsiPertama` ***sebelum menjalankan*** `fungsiKedua`.
 
+Jadi pada javascript, kita **tidak* bisa mengharapkan dengan memanggil fungsi
+secara berurutan dan berharap urutan tersebut akan dijalankan dengan benar.
+
+Solusinya bagaimana? salah satunya adalah dengan menggunakan **callback**.
+
 ### Synchronous callback
 
 ### Asynchronous callback
