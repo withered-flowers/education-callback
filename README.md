@@ -3,6 +3,9 @@
 1. [Mengapa butuh callback?](#mengapa-butuh-callback)
 1. [Yuk buat callback!](#yuk-buat-callback)
 1. [Real-world case study](#real-world-case-study)
+  1. Read file
+  1. Query database
+1. [Callback hell](#callback-hell)
 1. [Referensi](#referensi)
 
 ### Apa itu callback?
@@ -23,7 +26,7 @@ Javascript sendiri merupakan *event-driven language*.
 Ini artinya dalam Javascript, *ketimbang* menunggu sebuah respon berjalan,
 Javascript akan mengeksekusi sesuatu sambil menunggu event lainnya.
 
-Contoh:
+Code:
 
 ```javascript
 function fungsiPertama() {
@@ -57,7 +60,7 @@ dan menunggu response?
 Untuk mensimulasikan ini, kita akan mengubah kode kita di atas dengan menambahkan
 fungsi bawaan Javascript `setTimeout`
 
-Contoh baru:
+Code 2:
 
 ```javascript
 function fungsiPertama() {
@@ -75,7 +78,7 @@ fungsiPertama();
 fungsiKedua();
 ```
 
-Output baru:
+Output 2:
 
 ```javascript
 dua
@@ -93,14 +96,63 @@ Ini bukan berarti Javascript *ngeyel* dengan tidak menjalankan `fungsiPertama`
 dahulu baru menjalankan `fungsiKedua`, hanya saja ***Javascript tidak menunggu***
 ***respon dari*** `fungsiPertama` ***sebelum menjalankan*** `fungsiKedua`.
 
-Jadi pada javascript, kita **tidak* bisa mengharapkan dengan memanggil fungsi
+Jadi pada javascript, kita **tidak** bisa mengharapkan dengan memanggil fungsi
 secara berurutan dan berharap urutan tersebut akan dijalankan dengan benar.
 
 Solusinya bagaimana? salah satunya adalah dengan menggunakan **callback**.
 
 ### Yuk buat callback!
 
+Masih dengan contoh yang sama di atas, kita akan memodifikasi kode sehingga
+walaupun `fungsiPertama` menggunakan `setTimeout` sebagai analogi API Request,
+namun tetap "ditunggu" oleh `fungsiKedua`
+
+Code 3:
+
+```javascript
+
+//fungsiPertama akan menerima sebuah parameter dengan nama cb yang merupakan callback
+function fungsiPertama(cb) {
+  //Simulasi delay sebagai analogi API Request
+  setTimeout( () => {
+    console.log("satu");
+
+    //panggil parameter cb, as a function.
+    cb();
+  }, 500);
+}
+
+function fungsiKedua() {
+  console.log("dua");
+}
+
+//masukkan fungsiKedua sebagai parameter fungsiPertama
+fungsiPertama(fungsiKedua);
+```
+
+Output 3:
+
+```javascript
+satu
+dua
+```
+
+Penjelasan:
+
+Pada kode di atas, `fungsiPertama` sekarang menerima sebuah parameter bernama
+`cb` yang merupakan sebuah *callback*. Kemudian setelah mencetak tulisan
+**satu** (yang dianalogikan setelah API Request berhasil diperoleh), kita akan
+memanggil parameter `cb` sebagai fungsi.
+
+Saat memanggil `fungsiPertama`, kita memasukkan sebuah parameter, yaitu
+`fungsiKedua` yang akan dijadikan sebagai *callback*nya. sehingga setelah
+mencetak tulisan **satu**, kita akan menggail `fungsiKedua` untuk mencetak
+tulisan **dua**
+
 ### Real-world case study
+
+### Callback hell
+
 
 ### Referensi
 * [Brandon Morelli - Codeburst.io](https://codeburst.io/javascript-what-the-heck-is-a-callback-aba4da2deced?gi=dba6cb9bb948)
