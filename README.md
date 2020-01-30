@@ -168,18 +168,44 @@ Problem:<br/>
 <br/>
 Pada kode di atas, fungsi `showResult()` bisa jadi mengembalikan data `undefined`
 dikarenakan fungsi `requestDataViaAjax()` merupakan fungsi async, dimana seharusnya
-fungsi `showResult()` menunggu `requestDataViaAjax()` selesai dilakukan terlebih dahulu
-baru memanggil fungsi `showResult()`.
+kode di atas menunggu respon `requestDataViaAjax()` selesai dilakukan 
+terlebih dahulu baru memanggil fungsi `showResult()`.
 
 Solusi:<br/>
 <br/>
 Solusinya adalah dengan mengubah fungsi `showResult()` menjadi callback bagi
 fungsi `requestDataViaAjax()`.
 
-Solution 4:
+Solution 4:<br/>
+(dapat dilihat di link github [ini](https://github.com/withered-flowers/education-callback/tree/master/api-request))
 
 ```javascript
+const requestDataViaAjax = (cb) => {
+    let xhr = new XMLHttpRequest();
+    let url = "https://jsonplaceholder.typicode.com/users/1";
 
+    xhr.open('GET', url);
+  
+    xhr.onload = () => {
+      if(xhr.status === 200) {
+        cb(xhr.responseText);
+      }
+      else {
+        cb(null);
+      }
+    }
+  
+    xhr.send();
+  }
+  
+  const showResult = (data) => {
+    if (data != null) {
+      data = JSON.parse(data);
+      console.log(data);
+    }
+  }
+  
+  requestDataViaAjax(showResult);
 ```
 
 ### Read File
@@ -188,7 +214,7 @@ Dalam NodeJS, operasi file seperti baca dan tulis tulis umum digunakan. pada Nod
 sendiri operasi ini mendukung secara sync dan async. pada pembelajaran ini kita akan
 mencoba untuk membuat kode sederhana untuk membaca file secara async.
 
-Code 5:\
+Code 5:<br/>
 (dapat dilihat di link github [ini](https://github.com/withered-flowers/education-callback/tree/master/baca-folder))
 
 ```javascript
