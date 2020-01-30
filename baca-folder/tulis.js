@@ -13,32 +13,34 @@ const writeFile = promisify(fs.writeFile);
 //   });
 // });
 
-let baca1 = (err, data1, cb) => {
-  fs.readFile('hello2.md', (err,data2) => {
-    cb(err, data1, data2);
+let baca1 = (err, data, cb) => {
+  fs.readFile('hello2.md', (err,dataAdd) => {
+    let dataFinal = data + dataAdd;
+    cb(err, dataFinal);
   });
 };
 
-let baca2 = (err, data1, data2, cb) => {
-  fs.readFile('hello3.md', (err,data3) => {
-    cb(err, data1, data2, data3);
+let baca2 = (err, data, cb) => {
+  fs.readFile('hello3.md', (err,dataAdd) => {
+    let dataFinal = data + dataAdd;
+    cb(err, dataFinal);
   });
 };
 
-let baca3 = (err, data1, data2, data3, cb) => {
-  cb(data1, data2, data3);
-}
+// let baca3 = (err, data, cb) => {
+//   cb(data);
+// }
 
-let tulis1 = (data1,data2,data3) => {
-  fs.writeFile('output.md', data1+data2+data3, () => {
+let tulis1 = (err,data) => {
+  fs.writeFile('output.md', data, () => {
     console.log("File selesai dituliskan !");
   });
 }
 
-fs.readFile('hello1.md', (err,data) => {
-  baca1(err,data, (err, data, data2) => {
-    baca2(err,data,data2, (err,data,data2,data3) => {
-      tulis1(data,data2,data3);
+fs.readFile('hello1.md', (err, data) => {
+  baca1(err, data, (err, data2) => {
+    baca2(err, data2, (err, data3) => {
+      tulis1(err, data3);
     });
   });
 });
