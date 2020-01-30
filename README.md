@@ -3,8 +3,8 @@
 1. [Mengapa butuh callback?](#mengapa-butuh-callback)
 1. [Yuk buat callback!](#yuk-buat-callback)
 1. [Real-world case study](#real-world-case-study)
+    1. [API Request](#api-request)
     1. [Read file](#read-file)
-    1. [Query database](#database-query)
 1. [Callback hell](#callback-hell)
 1. [Referensi](#referensi)
 
@@ -28,7 +28,7 @@ Javascript akan mengeksekusi sesuatu sambil menunggu event lainnya.
 
 Code:
 
-```javascript
+```javascript {.line-numbers}
 function fungsiPertama() {
   console.log("satu");
 }
@@ -151,13 +151,18 @@ tulisan **dua**
 
 ## Real-world case study
 
+### API Request
+
+Pada code sebelumnya, disinggung analogi tentang API Request. cara sederhana
+pada javascript untuk melakukan API Request adalah dengan menggunakan AJAX.
+
 ### Read File
 
 Dalam NodeJS, operasi file seperti baca dan tulis tulis umum digunakan. pada NodeJS
 sendiri operasi ini mendukung secara sync dan async. pada pembelajaran ini kita akan
 mencoba untuk membuat kode sederhana untuk membaca file secara async.
 
-Code 4:\
+Code 5:\
 (dapat dilihat di link github [ini](https://github.com/withered-flowers/education-callback/tree/master/baca-folder))
 
 ```javascript
@@ -178,7 +183,10 @@ const callbackBacaFile = (error, data) => {
 let data = fs.readFile('hello.md', callbackBacaFile);
 ```
 
-### Database Query
+Output 5:
+```javascript
+ini hanyalah tulisan.
+```
 
 ## Callback hell
 
