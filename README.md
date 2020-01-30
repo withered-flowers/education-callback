@@ -145,13 +145,18 @@ Pada kode di atas, `fungsiPertama` sekarang menerima sebuah parameter bernama
 memanggil parameter `cb` sebagai fungsi.
 
 Saat memanggil `fungsiPertama`, kita memasukkan sebuah parameter, yaitu
-`fungsiKedua` yang akan dijadikan sebagai *callback*nya. sehingga setelah
+`fungsiKedua` yang akan dijadikan sebagai *callback*-nya. sehingga setelah
 mencetak tulisan **satu**, kita akan menggail `fungsiKedua` untuk mencetak
 tulisan **dua**
 
 ### Real-world case study
 
+### 1. Read File
+
+### 2. Database Query
+
 ### Callback hell
+
 
 
 ### Referensi
