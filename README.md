@@ -3,12 +3,12 @@
 1. [Mengapa butuh callback?](#mengapa-butuh-callback)
 1. [Yuk buat callback!](#yuk-buat-callback)
 1. [Real-world case study](#real-world-case-study)
-    1. Read file
-    1. Query database
+    1. [Read file](#read-file)
+    1. [Query database](#database-query)
 1. [Callback hell](#callback-hell)
 1. [Referensi](#referensi)
 
-### Apa itu callback?
+## Apa itu callback?
 Secara sederhananya:
 Callback merupakan sebuah fungsi yang akan dijalankan setelah sebuah fungsi lain
 telah selesai dijalankan - sehingga, dinamakan dengan *callback*
@@ -21,7 +21,7 @@ disebut dengan *first-class object*, yang artinya:
 * fungsi bisa memiliki *property* dan *method*
 * fungsi bisa mengembalikan nilai dalam bentuk fungsi
 
-### Mengapa butuh callback?
+## Mengapa butuh callback?
 Javascript sendiri merupakan *event-driven language*.
 Ini artinya dalam Javascript, *ketimbang* menunggu sebuah respon berjalan,
 Javascript akan mengeksekusi sesuatu sambil menunggu event lainnya.
@@ -149,16 +149,16 @@ Saat memanggil `fungsiPertama`, kita memasukkan sebuah parameter, yaitu
 mencetak tulisan **satu**, kita akan menggail `fungsiKedua` untuk mencetak
 tulisan **dua**
 
-### Real-world case study
+## Real-world case study
 
-### 1. Read File
+### Read File
 
-### 2. Database Query
+### Database Query
 
-### Callback hell
+## Callback hell
 
 
 
-### Referensi
+## Referensi
 * [Brandon Morelli - Codeburst.io](https://codeburst.io/javascript-what-the-heck-is-a-callback-aba4da2deced?gi=dba6cb9bb948)
 * [Sastra Panca Nababan - Medium](https://medium.com/coderupa/panduan-komplit-asynchronous-programming-pada-javascript-part-2-callback-3a717df6cfdf)
