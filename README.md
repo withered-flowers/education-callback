@@ -154,7 +154,33 @@ tulisan **dua**
 ### API Request
 
 Pada code sebelumnya, disinggung analogi tentang API Request. cara sederhana
-pada javascript untuk melakukan API Request adalah dengan menggunakan AJAX.
+pada javascript untuk melakukan API Request adalah dengan menggunakan AJAX,
+namun, umumnya untuk AJAX terdapat masalah seperti berikut:
+
+Code 4:
+
+```javascript
+let data = requestDataViaAjax();
+showResult(data);
+```
+
+Problem:<br/>
+<br/>
+Pada kode di atas, fungsi `showResult()` bisa jadi mengembalikan data `undefined`
+dikarenakan fungsi `requestDataViaAjax()` merupakan fungsi async, dimana seharusnya
+fungsi `showResult()` menunggu `requestDataViaAjax()` selesai dilakukan terlebih dahulu
+baru memanggil fungsi `showResult()`.
+
+Solusi:<br/>
+<br/>
+Solusinya adalah dengan mengubah fungsi `showResult()` menjadi callback bagi
+fungsi `requestDataViaAjax()`.
+
+Solution 4:
+
+```javascript
+
+```
 
 ### Read File
 
