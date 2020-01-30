@@ -19,7 +19,6 @@ disebut dengan *first-class object*, yang artinya:
 * fungsi bisa dijadikan sebagai parameter
 * fungsi bisa disimpan ke dalam variabel
 * fungsi bisa memiliki *property* dan *method*
-* fungsi bisa mengembalikan nilai dalam bentuk fungsi
 
 ## Mengapa butuh callback?
 Javascript sendiri merupakan *event-driven language*.
