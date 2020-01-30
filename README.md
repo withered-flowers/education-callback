@@ -275,7 +275,9 @@ Solusi 6:<br/>
 Solusi dari permasalahan ini adalah:
 * Jangan menggunakan fungsi dalam fungsi seperti contoh kode di atas.
 * Biasakan membuat kode lebih modular agar lebih mudah dibaca (pecah fungsi dan beri nama)
-* Handle **setiap error**
+* Handle **setiap error** yang ada di dalam **setiap callback**.
+* Mengggunakan alternatif dari callback yang sudah disediakan dalam Javascript
+  (**Promise** atau **async / await**)
 
 
 ## Referensi
