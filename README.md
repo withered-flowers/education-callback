@@ -255,14 +255,14 @@ fs.readFile('hello1.md', (a) => {
       fs.writeFile('output.md', a+b+c, () => {
         console.log("File selesai dituliskan !");
       });
-    })
-  })
+    });
+  });
 });
 ```
 
 Problem 6:<br/>
 <br/>
-Dapat dilihat dari kode di atas, betapa banyaknya `})` di akhir? *OMG*,
+Dapat dilihat dari kode di atas, betapa banyaknya `})` di akhir? *Oh My God*,<br/>
 kondisi seperti inilah yang disebut dengan **Callback Hell**.
 
 Kondisi seperti ini membuat:
