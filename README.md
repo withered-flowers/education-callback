@@ -242,8 +242,43 @@ ini hanyalah tulisan.
 
 ## Callback hell
 
+Callback hell merupakan kondisi ketika programmer membuat beberapa callback di
+dalam callback (nested callback) sehingga membuat codingan yang sudah ada sulit untuk 
+dibaca.
+
+Contoh 6:
+
+```javascript
+fs.readFile('hello1.md', (a) => {
+  fs.readFile('hello2.md', (b) => {
+    fs.readFile('hello3.md', (c) => {
+      fs.writeFile('output.md', a+b+c, () => {
+        console.log("File selesai dituliskan !");
+      });
+    })
+  })
+});
+```
+
+Problem 6:<br/>
+<br/>
+Dapat dilihat dari kode di atas, betapa banyaknya `})` di akhir? *OMG*,
+kondisi seperti inilah yang disebut dengan **Callback Hell**.
+
+Kondisi seperti ini membuat:
+* Kode lebih sulit dibaca, kode piramid seperti ini akan sulit untuk di-maintain nantinya
+* Kode di atas juga belum memasukkan adanya *error handling*, sehingga jika proses 
+  baca atau tulisnya error, sulit untuk dideteksi.
+
+Solusi 6:<br/>
+<br/>
+Solusi dari permasalahan ini adalah:
+* Jangan menggunakan fungsi dalam fungsi seperti contoh kode di atas.
+* Biasakan membuat kode lebih modular agar lebih mudah dibaca (pecah fungsi dan beri nama)
+* Handle **setiap error**
 
 
 ## Referensi
 * [Brandon Morelli - Codeburst.io](https://codeburst.io/javascript-what-the-heck-is-a-callback-aba4da2deced?gi=dba6cb9bb948)
 * [Sastra Panca Nababan - Medium](https://medium.com/coderupa/panduan-komplit-asynchronous-programming-pada-javascript-part-2-callback-3a717df6cfdf)
+* [Callback Hell [dot] com](http://callbackhell.com/)
