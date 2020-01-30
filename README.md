@@ -173,7 +173,7 @@ const callbackBacaFile = (error, data) => {
     console.log(data.toString());
   }
 };
-
+ 
 //memanggil fungsi readFile untuk membaca data hello.md
 let data = fs.readFile('hello.md', callbackBacaFile);
 ```
