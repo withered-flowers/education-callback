@@ -277,6 +277,8 @@ Solusi dari permasalahan ini adalah:
 * Handle **setiap error** yang ada di dalam **setiap callback**.
 * Mengggunakan alternatif dari callback yang sudah disediakan dalam Javascript
   (**Promise** atau **async / await**)
+* Solusi untuk permasalahan di atas (tanpa error handling) dapat dilihat pada link
+  [ini](https://github.com/withered-flowers/education-callback/blob/master/baca-folder/tulis.js)
 
 
 ## Referensi
