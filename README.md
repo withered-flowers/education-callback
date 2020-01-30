@@ -28,7 +28,7 @@ Javascript akan mengeksekusi sesuatu sambil menunggu event lainnya.
 
 Code:
 
-```javascript {.line-numbers}
+```javascript
 function fungsiPertama() {
   console.log("satu");
 }
