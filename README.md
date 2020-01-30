@@ -3,8 +3,8 @@
 1. [Mengapa butuh callback?](#mengapa-butuh-callback)
 1. [Yuk buat callback!](#yuk-buat-callback)
 1. [Real-world case study](#real-world-case-study)
-  1. Read file
-  1. Query database
+    1. Read file
+    1. Query database
 1. [Callback hell](#callback-hell)
 1. [Referensi](#referensi)
 
