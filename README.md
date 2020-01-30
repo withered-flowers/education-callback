@@ -3,15 +3,15 @@
 1. [Mengapa butuh callback?](#mengapa-butuh-callback)
 1. [Yuk buat callback!](#yuk-buat-callback)
 1. [Real-world case study](#real-world-case-study)
-    1. [API Request](#api-request)
-    1. [Read file](#read-file)
+  * [API Request](#api-request)
+  * [Read file](#read-file)
 1. [Callback hell](#callback-hell)
 1. [Referensi](#referensi)
 
 ## Apa itu callback?
 Secara sederhananya:
 Callback merupakan sebuah fungsi yang akan dijalankan setelah sebuah fungsi lain
-telah selesai dijalankan - sehingga, dinamakan dengan *callback*
+telah selesai dijalankan, sehingga, dinamakan dengan *callback*
 
 Secara kompleksnya:
 Dalam javascript, perlu diingat bahwa fungsi adalah sebuah objek atau sering
