@@ -153,6 +153,31 @@ tulisan **dua**
 
 ### Read File
 
+Dalam NodeJS, operasi file seperti baca dan tulis tulis umum digunakan. pada NodeJS
+sendiri operasi ini mendukung secara sync dan async. pada pembelajaran ini kita akan
+mencoba untuk membuat kode sederhana untuk membaca file secara async.
+
+Code 4:
+(dapat dilihat di link github [ini](https://github.com/withered-flowers/education-callback/baca-folder))
+
+```javascript
+//modul fs dari nodejs
+const fs = require('fs');
+
+//fungsi yang digunakan sebagai callback
+const callbackBacaFile = (error, data) => {
+  if(error) {
+    console.log("Error dalam membaca file: " + error);
+  }
+  else {
+    console.log(data.toString());
+  }
+};
+
+//memanggil fungsi readFile untuk membaca data hello.md
+let data = fs.readFile('hello.md', callbackBacaFile);
+```
+
 ### Database Query
 
 ## Callback hell
